@@ -5,3 +5,5 @@ description: Tuple data structure
 homepage: https://github.com/localvoid/tuple
 environment:
   sdk: '>=1.6.0'
+dev_dependencies:
+  test: any
