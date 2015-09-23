@@ -6,6 +6,9 @@ build/
 .packages
 packages
 
+.pub
+doc
+
 .buildlog
 *.js_
 *.js.deps
