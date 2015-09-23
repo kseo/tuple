@@ -39,5 +39,19 @@ main() {
       final key = new Tuple2<int, bool>(1, true);
       expect(map[key], equals('a'));
     });
+
+    test('toList() should return a listing containing the items of the tuple',
+        () {
+      expect(t.toList(), orderedEquals([1, true]));
+    });
+
+    test('toList() should return a fixed list by default', () {
+      expect(() => t.toList().add(3),
+          throwsA(new isInstanceOf<UnsupportedError>()));
+    });
+
+    test('toList(growable: true) should return a growable list', () {
+      expect(t.toList(growable: true)..add('a'), orderedEquals([1, true, 'a']));
+    });
   });
 }

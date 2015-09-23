@@ -25,6 +25,13 @@ class Tuple2<T1, T2> {
     return new Tuple2<T1, T2>(item1, v);
   }
 
+  /// Creates a [List] containing the items of this [Tuple2].
+  ///
+  /// The elements are in item order. The list is variable-length
+  /// if [growable] is true.
+  List toList({bool growable: false}) =>
+      new List.from([item1, item2], growable: growable);
+
   @override
   String toString() => '[$item1, $item2]';
 
@@ -63,6 +70,13 @@ class Tuple3<T1, T2, T3> {
   Tuple3<T1, T2, T3> withItem3(T3 v) {
     return new Tuple3<T1, T2, T3>(item1, item2, v);
   }
+
+  /// Creates a [List] containing the items of this [Tuple3].
+  ///
+  /// The elements are in item order. The list is variable-length
+  /// if [growable] is true.
+  List toList({bool growable: false}) =>
+      new List.from([item1, item2, item3], growable: growable);
 
   @override
   String toString() => '[$item1, $item2, $item3]';
@@ -111,6 +125,13 @@ class Tuple4<T1, T2, T3, T4> {
   Tuple4<T1, T2, T3, T4> withItem4(T4 v) {
     return new Tuple4<T1, T2, T3, T4>(item1, item2, item3, v);
   }
+
+  /// Creates a [List] containing the items of this [Tuple4].
+  ///
+  /// The elements are in item order. The list is variable-length
+  /// if [growable] is true.
+  List toList({bool growable: false}) =>
+      new List.from([item1, item2, item3, item4], growable: growable);
 
   @override
   String toString() => '[$item1, $item2, $item3, $item4]';
@@ -171,6 +192,13 @@ class Tuple5<T1, T2, T3, T4, T5> {
   Tuple5<T1, T2, T3, T4, T5> withItem5(T5 v) {
     return new Tuple5<T1, T2, T3, T4, T5>(item1, item2, item3, item4, v);
   }
+
+  /// Creates a [List] containing the items of this [Tuple5].
+  ///
+  /// The elements are in item order. The list is variable-length
+  /// if [growable] is true.
+  List toList({bool growable: false}) =>
+      new List.from([item1, item2, item3, item4, item5], growable: growable);
 
   @override
   String toString() => '[$item1, $item2, $item3, $item4, $item5]';
