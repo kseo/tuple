@@ -21,6 +21,15 @@ main() {
       expect(t.withItem2(false), equals(new Tuple2<int, bool>(1, false)));
     });
 
+    test('create a tuple from a list of items', () {
+      final t1 = new Tuple2.fromList([1, true]);
+      expect(t1.item1, equals(1));
+      expect(t1.item2, equals(true));
+
+      expect(() => new Tuple2.fromList([1]), throwsA(new isInstanceOf<ArgumentError>()));
+      expect(() => new Tuple2.fromList([1, true, 'a']), throwsA(new isInstanceOf<ArgumentError>()));
+    });
+
     test('equality', () {
       final otherT = new Tuple2<int, bool>(1, true);
       expect(t, equals(otherT));

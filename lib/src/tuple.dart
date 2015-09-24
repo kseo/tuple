@@ -15,6 +15,15 @@ class Tuple2<T1, T2> {
   /// Creates a new tuple value with the specified items.
   const Tuple2(this.item1, this.item2);
 
+  /// Create a new tuple value with the specified list [items].
+  factory Tuple2.fromList(List items) {
+    if (items.length != 2) {
+      throw new ArgumentError('items must have length 2');
+    }
+
+    return new Tuple2(items[0], items[1]);
+  }
+
   /// Returns a tuple with the first item set to the specified value.
   Tuple2<T1, T2> withItem1(T1 v) {
     return new Tuple2<T1, T2>(v, item2);
@@ -55,6 +64,15 @@ class Tuple3<T1, T2, T3> {
 
   /// Creates a new tuple value with the specified items.
   const Tuple3(this.item1, this.item2, this.item3);
+
+  /// Create a new tuple value with the specified list [items].
+  factory Tuple3.fromList(List items) {
+    if (items.length != 3) {
+      throw new ArgumentError('items must have length 3');
+    }
+
+    return new Tuple3(items[0], items[1], items[2]);
+  }
 
   /// Returns a tuple with the first item set to the specified value.
   Tuple3<T1, T2, T3> withItem1(T1 v) {
@@ -105,6 +123,15 @@ class Tuple4<T1, T2, T3, T4> {
 
   /// Creates a new tuple value with the specified items.
   const Tuple4(this.item1, this.item2, this.item3, this.item4);
+
+  /// Create a new tuple value with the specified list [items].
+  factory Tuple4.fromList(List items) {
+    if (items.length != 4) {
+      throw new ArgumentError('items must have length 4');
+    }
+
+    return new Tuple4(items[0], items[1], items[2], items[3]);
+  }
 
   /// Returns a tuple with the first item set to the specified value.
   Tuple4<T1, T2, T3, T4> withItem1(T1 v) {
@@ -167,6 +194,15 @@ class Tuple5<T1, T2, T3, T4, T5> {
 
   /// Creates a new tuple value with the specified items.
   const Tuple5(this.item1, this.item2, this.item3, this.item4, this.item5);
+
+  /// Create a new tuple value with the specified list [items].
+  factory Tuple5.fromList(List items) {
+    if (items.length != 5) {
+      throw new ArgumentError('items must have length 5');
+    }
+
+    return new Tuple5(items[0], items[1], items[2], items[3], items[4]);
+  }
 
   /// Returns a tuple with the first item set to the specified value.
   Tuple5<T1, T2, T3, T4, T5> withItem1(T1 v) {
@@ -244,6 +280,16 @@ class Tuple6<T1, T2, T3, T4, T5, T6> {
   /// Creates a new tuple value with the specified items.
   const Tuple6(
       this.item1, this.item2, this.item3, this.item4, this.item5, this.item6);
+
+  /// Create a new tuple value with the specified list [items].
+  factory Tuple6.fromList(List items) {
+    if (items.length != 6) {
+      throw new ArgumentError('items must have length 6');
+    }
+
+    return new Tuple6(
+        items[0], items[1], items[2], items[3], items[4], items[5]);
+  }
 
   /// Returns a tuple with the first item set to the specified value.
   Tuple6<T1, T2, T3, T4, T5, T6> withItem1(T1 v) {
@@ -338,6 +384,16 @@ class Tuple7<T1, T2, T3, T4, T5, T6, T7> {
   /// Creates a new tuple value with the specified items.
   const Tuple7(this.item1, this.item2, this.item3, this.item4, this.item5,
       this.item6, this.item7);
+
+  /// Create a new tuple value with the specified list [items].
+  factory Tuple7.fromList(List items) {
+    if (items.length != 7) {
+      throw new ArgumentError('items must have length 7');
+    }
+
+    return new Tuple7(
+        items[0], items[1], items[2], items[3], items[4], items[5], items[6]);
+  }
 
   /// Returns a tuple with the first item set to the specified value.
   Tuple7<T1, T2, T3, T4, T5, T6, T7> withItem1(T1 v) {
