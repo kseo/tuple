@@ -1,3 +1,6 @@
+#### 1.0.0
+   * Remove _hash function and use quiver_hashcode package instead.
+
 #### 0.4.0
    * Add fromList factory constructor.
    * Add Tuple6 and Tuple7 classes.
