@@ -48,7 +48,7 @@ class Tuple2<T1, T2> {
   bool operator ==(o) => o is Tuple2 && o.item1 == item1 && o.item2 == item2;
 
   @override
-  int get hashCode => _hash([item1.hashCode, item2.hashCode]);
+  int get hashCode => hash2(item1.hashCode, item2.hashCode);
 }
 
 /// Represents a 3-tuple, or triple.
@@ -104,7 +104,7 @@ class Tuple3<T1, T2, T3> {
       o is Tuple3 && o.item1 == item1 && o.item2 == item2 && o.item3 == item3;
 
   @override
-  int get hashCode => _hash([item1.hashCode, item2.hashCode, item3.hashCode]);
+  int get hashCode => hash3(item1.hashCode, item2.hashCode, item3.hashCode);
 }
 
 /// Represents a 4-tuple, or quadruple.
@@ -172,7 +172,7 @@ class Tuple4<T1, T2, T3, T4> {
 
   @override
   int get hashCode =>
-      _hash([item1.hashCode, item2.hashCode, item3.hashCode, item4.hashCode]);
+      hash4(item1.hashCode, item2.hashCode, item3.hashCode, item4.hashCode);
 }
 
 /// Represents a 5-tuple, or quintuple.
@@ -248,7 +248,7 @@ class Tuple5<T1, T2, T3, T4, T5> {
       o.item5 == item5;
 
   @override
-  int get hashCode => _hash([
+  int get hashCode => hashObjects([
         item1.hashCode,
         item2.hashCode,
         item3.hashCode,
@@ -348,7 +348,7 @@ class Tuple6<T1, T2, T3, T4, T5, T6> {
       o.item6 == item6;
 
   @override
-  int get hashCode => _hash([
+  int get hashCode => hashObjects([
         item1.hashCode,
         item2.hashCode,
         item3.hashCode,
@@ -460,7 +460,7 @@ class Tuple7<T1, T2, T3, T4, T5, T6, T7> {
       o.item6 == item7;
 
   @override
-  int get hashCode => _hash([
+  int get hashCode => hashObjects([
         item1.hashCode,
         item2.hashCode,
         item3.hashCode,
