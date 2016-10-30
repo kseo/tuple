@@ -21,7 +21,7 @@ class Tuple2<T1, T2> {
       throw new ArgumentError('items must have length 2');
     }
 
-    return new Tuple2(items[0], items[1]);
+    return new Tuple2<T1, T2>(items[0] as T1, items[1] as T2);
   }
 
   /// Returns a tuple with the first item set to the specified value.
@@ -71,7 +71,8 @@ class Tuple3<T1, T2, T3> {
       throw new ArgumentError('items must have length 3');
     }
 
-    return new Tuple3(items[0], items[1], items[2]);
+    return new Tuple3<T1, T2, T3>(
+        items[0] as T1, items[1] as T2, items[2] as T3);
   }
 
   /// Returns a tuple with the first item set to the specified value.
@@ -130,7 +131,8 @@ class Tuple4<T1, T2, T3, T4> {
       throw new ArgumentError('items must have length 4');
     }
 
-    return new Tuple4(items[0], items[1], items[2], items[3]);
+    return new Tuple4<T1, T2, T3, T4>(
+        items[0] as T1, items[1] as T2, items[2] as T3, items[3] as T4);
   }
 
   /// Returns a tuple with the first item set to the specified value.
@@ -201,7 +203,8 @@ class Tuple5<T1, T2, T3, T4, T5> {
       throw new ArgumentError('items must have length 5');
     }
 
-    return new Tuple5(items[0], items[1], items[2], items[3], items[4]);
+    return new Tuple5<T1, T2, T3, T4, T5>(items[0] as T1, items[1] as T2,
+        items[2] as T3, items[3] as T4, items[4] as T5);
   }
 
   /// Returns a tuple with the first item set to the specified value.
@@ -287,8 +290,8 @@ class Tuple6<T1, T2, T3, T4, T5, T6> {
       throw new ArgumentError('items must have length 6');
     }
 
-    return new Tuple6(
-        items[0], items[1], items[2], items[3], items[4], items[5]);
+    return new Tuple6<T1, T2, T3, T4, T5, T6>(items[0] as T1, items[1] as T2,
+        items[2] as T3, items[3] as T4, items[4] as T5, items[5] as T6);
   }
 
   /// Returns a tuple with the first item set to the specified value.
@@ -391,8 +394,14 @@ class Tuple7<T1, T2, T3, T4, T5, T6, T7> {
       throw new ArgumentError('items must have length 7');
     }
 
-    return new Tuple7(
-        items[0], items[1], items[2], items[3], items[4], items[5], items[6]);
+    return new Tuple7<T1, T2, T3, T4, T5, T6, T7>(
+        items[0] as T1,
+        items[1] as T2,
+        items[2] as T3,
+        items[3] as T4,
+        items[4] as T5,
+        items[5] as T6,
+        items[6] as T7);
   }
 
   /// Returns a tuple with the first item set to the specified value.

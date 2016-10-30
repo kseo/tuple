@@ -1,3 +1,6 @@
+#### 1.0.1
+   * Fix all strong-mode warnings and errors.
+
 #### 1.0.0
    * Remove _hash function and use quiver_hashcode package instead.
 
